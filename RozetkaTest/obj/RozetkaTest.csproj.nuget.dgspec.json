@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/applecity/Projects/RozetkaTest/RozetkaTest/RozetkaTest.csproj": {}
+    "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/RozetkaTest.csproj": {}
   },
   "projects": {
-    "/Users/applecity/Projects/RozetkaTest/RozetkaTest/RozetkaTest.csproj": {
+    "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/RozetkaTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/applecity/Projects/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
+        "projectUniqueName": "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
         "projectName": "RozetkaTest",
-        "projectPath": "/Users/applecity/Projects/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
+        "projectPath": "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
         "packagesPath": "/Users/applecity/.nuget/packages/",
-        "outputPath": "/Users/applecity/Projects/RozetkaTest/RozetkaTest/obj/",
+        "outputPath": "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/applecity/.config/NuGet/NuGet.Config"
@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "DotNetSeleniumExtras.WaitHelpers": {
+              "target": "Package",
+              "version": "[3.11.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"

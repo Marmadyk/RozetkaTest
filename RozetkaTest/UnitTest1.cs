@@ -11,7 +11,7 @@ namespace RozetkaTest
 
         private readonly By phoneCategory = By.XPath("//aside[contains(@class,'sidebar')]//a[contains(@href,'telefony')]");
         private readonly By smartPhone = By.CssSelector("[title~=Мобільні] img");
-        private readonly By appleProducer = By.XPath("//li/a[contains(@href,'producer=apple')]");
+        private readonly By appleProducer = By.XPath("//a[contains(@href,'producer=apple')]/parent::li");
         private readonly By sortFromExpensiveToCheap = By.CssSelector("option[value~=expensive]");
 
         private readonly By categoryDropDownButton = By.XPath("//button[@id='fat-menu']");
@@ -23,14 +23,13 @@ namespace RozetkaTest
         private readonly By gameConsolesCategory = By.CssSelector("[title~=приставки] img");
         private readonly By microsoftProducer = By.XPath("//label[@for='Microsoft']");
 
-        private readonly By addToCartButton = By.XPath("//button[@class='buy-button goods-tile__buy-button ng-star-inserted'][@aria-label='Купити']");
-        private readonly By cartButton = By.XPath("//button[@class='header__button ng-star-inserted header__button--active']");
+        private readonly By addToCartButton = By.XPath("//button[contains(@class,'buy-button')]/ancestor::app-buy-button");
+        private readonly By cartButton = By.XPath("//button[contains(@class,'header__button--active')]");
 
         private readonly By counterOfItemsInCart = By.XPath("//span[contains(@class,'counter')]");
-        private readonly By totalAmountOfItemsInCart = By.XPath("//div[@class='cart-receipt__sum-price']/span[1]");
+        private readonly By totalAmountInCart = By.CssSelector("div.cart-receipt__sum");
 
         private const string expectedCountOfItemsInCart = "3";
-
 
         [SetUp]
         public void Setup()
@@ -110,11 +109,11 @@ namespace RozetkaTest
             var actualQttOfItemsInCart = driver.FindElement(counterOfItemsInCart).Text;
             Assert.AreEqual(expectedCountOfItemsInCart, actualQttOfItemsInCart, "not enough items");
 
-            var busketbutton = driver.FindElement(cartButton);
-            busketbutton.Click();
+            var CartbuttonClick = driver.FindElement(cartButton);
+            CartbuttonClick.Click();
 
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(30);
-            var amountInCart = driver.FindElement(totalAmountOfItemsInCart).Text;
+            var amountInCart = driver.FindElement(totalAmountInCart).Text;
             int.TryParse(string.Join("", amountInCart.Where(c => char.IsDigit(c))), out int sumInCart);
             bool compareAmountInCart = (sumInCart/27) < 5000;
             Assert.IsTrue(compareAmountInCart);

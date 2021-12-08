@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "8DP5+T3uBVZ0oBzKHftP+FOswjnqJatrDYtu7w3DTn2/Svufj7nzU+AdjmxsodLWoUZLyAtrb/68wVRdCX7Zow==",
+  "dgSpecHash": "Ua0cVbzsl2hzfBWR0V54gDlz7VeD44/TZdBKDFreNjkNap9OaomwNkWrWb1i7RzLS3WWXSWJ6pbav4n3GCiEHA==",
   "success": true,
-  "projectFilePath": "/Users/applecity/Projects/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
+  "projectFilePath": "/Users/applecity/Desktop/RozetkaTest/RozetkaTest/RozetkaTest.csproj",
   "expectedPackageFiles": [
+    "/Users/applecity/.nuget/packages/dotnetseleniumextras.waithelpers/3.11.0/dotnetseleniumextras.waithelpers.3.11.0.nupkg.sha512",
     "/Users/applecity/.nuget/packages/microsoft.codecoverage/16.5.0/microsoft.codecoverage.16.5.0.nupkg.sha512",
     "/Users/applecity/.nuget/packages/microsoft.net.test.sdk/16.5.0/microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "/Users/applecity/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
